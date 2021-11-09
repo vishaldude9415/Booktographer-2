@@ -1,0 +1,1088 @@
+/*------------------------------------ CSS Fonts Imports--------------------------------------------  */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/*------------------------------------ CSS Variables Used--------------------------------------------  */
+
+:root{
+    --Poppins: 'Poppins', sans-serif;
+    --Baloo-Bhai-2: 'Baloo Bhai 2', cursive;
+    --Raleway: 'Raleway', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+    --Ubuntu: 'Ubuntu', sans-serif;
+    --font-family: var(--Ubuntu);
+}
+
+/* ------------------------------------CSS Reset ------------------------------------------------------ */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#loading{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #f5f7f6  url('../Images_Genre_Page/book-preloader.gif') no-repeat center;
+    z-index: 99999;
+    background-size: 300px;
+    background-position-y: 40%;
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+html{
+    font-size: 62.5%;
+    width: 95vw;
+    height: 100%;
+    
+}
+
+body{
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    /* height: 150rem; */
+    height: 100%;
+    position: relative;
+    width: 99vw;
+}
+
+/* -----------------------------------------NAVBAR------------------------------------------------------ */
+.logo-display{
+    display: none;
+}
+
+.logo{
+    display: none;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 2.5rem ; */
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+    background-color: black;
+    padding: 0.8rem;
+    /* display: none; */
+}
+.navbar .heading h1{
+       color: white;
+       font-size: 3rem;
+       cursor: pointer;
+       font-family: var(--font-family);
+}
+
+.navbar_elements{
+    display: flex;
+    margin-left: 8rem;
+    width: 59%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-family);
+}
+
+.navbar .navbar_elements .navbar_elements_left{
+    display: flex;
+}
+
+.navbar_elements button{
+    padding: 1rem 4.1rem;
+    /* background-color: ; */
+    background: linear-gradient(to right,rgba(255,0,0,1),rgba(212, 115, 115, 0.986));
+    border: 1px solid red;
+    outline: none;
+    border: 2px solid red;
+    border-radius: 7rem;
+    cursor: pointer;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+}
+
+.navbar_elements button:hover{
+    background-color: white;
+
+}
+
+.navbar_elements button:hover a{
+    color:black;
+}
+
+.navbar_elements button a{
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-family);
+}
+
+.navbar .navbar_elements .navbar_elements_left .element{
+    margin-right: 2rem;
+}
+
+.navbar_elements .element a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: white;
+    border: none;
+    font-family: var(--font-family);
+}
+
+
+
+.burger{
+    display: none;
+  position: absolute;
+  cursor: pointer;
+  right: 2rem;
+  top: 2rem;
+}
+
+.line{
+    width: 3.3rem;
+    background-color: white;
+    height: 0.4rem;
+    margin: 0.3rem 0.3rem;
+}
+
+/*--------------------------------------- NAVBAR END -----------------------------------*/
+/*--------------------------------------- CAROUSEL CSS --------------------------------*/
+
+.main-carousel{
+      /* display: flex;  This should be deleted when online */
+      /* height: 344rem; */
+      /* width: 90vw; */
+}
+
+.main-carousel .carousel-cell img{
+    width: 18rem;
+    height: 25rem;
+    /* border: 2px solid red; */
+}
+.main-carousel .carousel-cell{
+    width: 40%;
+    /* background-color: pink; */
+    /* border: 2px solid blue; */
+    /* position: relative; */
+}
+
+.main-carousel .carousel-cell .carousel-format{
+    display: flex;
+    height: 25rem;
+    /* position: relative; */
+     /* width: 54rem;  This should be deleted when online */
+
+}
+
+.main-carousel .carousel-cell-content button{
+    background-color: white;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    padding: 0.8rem 4rem;
+    border: none;
+    /* color: rgb(238, 97, 121); */
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+.main-carousel .carousel-cell-image{
+    /* background-color: green; */
+    /* position: absolute; */
+    margin-left: 2rem;
+}
+
+.main-carousel .carousel-cell-image img{
+    /* position: absolute; */
+    /* top: 5rem; */
+    /* left: 4rem; */
+    /* width: 18rem; */
+    /* height: 20rem; */
+    /* margin-left: 2rem; */
+    /* transform: translateY(21%); */
+    margin-top: 2rem;
+    box-shadow: 0 0rem 0.8rem 0rem black;
+}
+
+.main-carousel .carousel-cell-content{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* margin-left: 20rem; */
+    /* background-color: yellow; */
+}
+
+.main-carousel .carousel-cell .carousel-format .carousel-cell-content h1{
+    font-size: 2.5rem;
+    padding-bottom: 0.2rem;
+    color: white;
+    font-weight: bold;
+
+}
+
+.main-carousel .carousel-cell .carousel-format .carousel-cell-content p{
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+    color: white;
+    line-height: 2rem;
+}
+
+.main-carousel .carousel-cell .carousel-format .carousel-cell-content button{
+             position: absolute;
+    
+}
+
+.main-carousel .carousel-cell .carousel-format .carousel-cell-content #seeBookBtn{
+    margin-bottom: 2rem;
+}
+
+
+/* Carousels Colors */
+.carousel-1{
+    background-color: rgb(230 81 230);
+
+}
+
+.carousel-1 .carousel-cell-content button{
+    color:  rgb(230 81 230);
+}
+.carousel-2{
+    background-color: rgb(85 162 226);
+    
+}
+
+.carousel-2 .carousel-cell-content button{
+    color:  rgb(85 162 226);
+}
+
+.carousel-3{
+    background-color: rgb(243 120 120);
+}
+
+.carousel-3 .carousel-cell-content button{
+    color: rgb(243 120 120);
+}
+.carousel-4{
+    background-color: rgb(27 218 130);
+}
+
+.carousel-4 .carousel-cell-content button{
+    color: rgb(27 218 130);
+}
+
+.carousel-5{
+    background-color: rgb(58, 218, 191);
+    background-color: rgb(188 82 226);
+}
+
+.carousel-5 .carousel-cell-content button{
+    color:  rgb(188 82 226);
+    /* background-color: rgb(188 82 226); */
+}
+
+.carousel-6{
+    background-color: rgb(58, 218, 191);
+    /* background-color: rgb(58, 218, 191); */
+}
+
+.carousel-6 .carousel-cell-content button{
+    color: rgb(58, 218, 191);
+    /* background-color: rgb(58, 218, 191); */
+}
+
+
+    /* --------------------------------MIDDLE div------------------------------------------ */
+
+    section .middle-div{
+        /* border: 2px solid red; */
+        width: 98.5vw;
+        position: relative;
+        display: flex;
+        height: 95%;
+        background-color:  rgba(226, 235, 241, 0.425);
+        padding-top: 3rem;
+        /* margin-top: 5rem; */
+    }
+
+    section .responsive-genre{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        margin-top: 7rem;
+
+    }
+
+     section .middle-div .resp-category{
+        display: none;
+    
+    }
+
+    section .responsive-genre .popular-by-genre{
+        display: flex;
+        justify-content: space-around;
+        width: 25rem;
+        align-items: center;
+        border: 1px solid black;
+        box-shadow: 0 0.3rem 0.5rem 0 grey;
+    }
+
+    section .middle-div .author-left{
+        /* background-color: grey; */
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 100%;
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
+
+    div.middle-div .author-left .author-left-week{
+        /* background-color: rgb(238, 233, 188); */
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        height: 33rem;  /*---------------->>Remove for responsive */
+        margin: 2rem 0;
+        /* margin-top: 5rem; */
+        transition: all 0.7s ease-out;
+        /* box-shadow: 0rem 0rem 0.7rem grey; */
+        /* border: 2px solid red; */
+    }
+   
+    div.middle-div .author-left .author-left-week .plus-visible{
+        opacity: 0;
+    }
+
+    div.middle-div .author-left .author-left-week .authors-name{
+        margin-top: 1.7rem;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        
+    }
+
+    div.middle-div .author-left .author-left-week .left-week-heading{
+        font-size: 2rem;
+        font-weight: bold;
+        /* box-shadow: 0 0 0.7rem grey; */
+    }
+
+    div.middle-div .author-left .author-left-week .authors{
+
+        display: flex;
+        flex-direction: column;
+        height: 20rem;
+        width: 20rem;
+        background-color: rgba(226, 235, 241,);
+        /* justify-content: center; */
+        align-items: center;
+        
+    
+    }
+    div.middle-div .author-left .author-left-book-year{
+        /* background-color: rgb(197, 238, 197); */
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        /* height: 30%; */
+        flex-direction: column;
+        transition: all 0.7s ease-in-out;
+        /* box-shadow: 0rem 0rem 0.7rem grey; */
+        margin: 0rem 1rem;
+        margin-top: 2rem;
+        justify-content: space-between;
+    }
+
+    div.middle-div .author-left .author-left-book-year .author-book-format{
+        transition: all 1s ease;
+        /* background-color: black; */
+    }
+
+    div.middle-div .author-left .author-left-book-year .author-book-format a{
+        text-decoration: none;
+        color: black;
+    }
+    div.middle-div .author-left .author-left-book-year .author-book-format a:hover{
+        text-decoration: underline;
+    }
+
+    .author-left-book-year .opacity-year{
+        /* transition: all 0.5s ease-in-out; */
+    }
+
+    .author-left-book-year .author-left-book{
+        font-size: 2rem;
+        font-weight: bold;
+        display: flex;
+        width: 85%;
+        justify-content: space-between;
+        /* box-shadow: 0 0 0.7rem grey; */
+    }
+
+    .author-left-book-year  .author-book-name{
+        margin-top:3rem;
+    }
+
+    
+    .author-left-book-year .author-left-book #span-year{
+        display: none;
+    }
+
+    div.middle-div .author-right{
+
+    /* background-color: rgb(235, 178, 206); */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 80%;
+    height: 100%;
+    margin-top: 1rem;
+    }
+
+    div.middle-div .author-right .author-right-header{
+        background-color: rgba(226, 235, 241,);
+        display: flex;
+        height: 5rem;
+        justify-content: space-between;
+        align-items: center;
+        display: none;
+        /* box-shadow: 0 0.1rem 0.7rem 0 grey; */
+    }
+
+     hr.one{
+         border: none;
+         height: 0.15rem;
+         background: #dddddddd;
+        
+     }
+
+    div.middle-div .author-right .author-right-header .heading{
+        margin-left: 2rem;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    div.middle-div .author-right .author-right-header .categories{
+        display: flex;
+    }
+
+    div.middle-div .author-right .author-right-header .categories .category-name{
+         margin-left: 3rem;
+         font-weight: bold;
+         font-size: 1.5rem;
+         cursor: pointer;
+
+    }
+
+    div.middle-div .author-right .author-right-card-wrapper{
+        /* background-color: rgb(230, 184, 184); */
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 5rem;
+        grid-row-gap: 5rem;
+        margin: 4rem 0rem;
+
+    }
+
+    .author-right-card-wrapper a{
+        text-decoration: none;
+        color: black;
+    }
+
+    div.middle-div .author-right .author-right-card-wrapper .card{
+        display: flex;
+        justify-content: center;
+        height: 21rem;
+        width: 35vw;
+
+        /* background-color: maroon; */
+        /* position: relative; */
+        box-shadow: 0 0.1rem 0.7rem 0 grey;
+    }
+
+    div.middle-div .author-right .author-right-card-wrapper .card:hover{
+
+         transform: scale(1.1);
+         box-shadow: 0 0.8rem 5rem rgba(0, 0, 0, 0.2);
+         z-index: 1;
+         transition: 0.5s all ease-in-out;
+         cursor: pointer;
+         
+         
+    }
+
+
+    div.middle-div .author-right .author-right-card-wrapper .card .card-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        height: 15rem;
+        /* position: absolute; */
+    }
+
+    div.middle-div .author-right .author-right-card-wrapper .card .card-image img{
+        width: 10rem;
+        transform: translateY(-10%);
+        height: 17rem;
+        margin-left: 2rem;
+        box-shadow: 0rem 0rem 1rem 0.1rem grey;
+        /* position: absolute; */
+        /* left: 5rem; */
+    }
+
+    div.middle-div .author-right .author-right-card-wrapper .card .card-content{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        background-color: white;
+        padding: 3rem;
+    }
+
+    div.middle-div .author-right .author-right-card-wrapper .card .card-content h1{
+        
+        font-size: 2.3rem;
+        line-height: 3rem;
+        
+    }
+
+    div.middle-div .author-right .author-right-card-wrapper .card .card-content .fa{
+        color: orange;
+        margin-right:1rem ;
+        /* border: 1px solid black; */
+        /* width: 1.3rem; */
+    }
+    
+    div.middle-div .author-right .author-right-card-wrapper .card .card-content .star{
+        display: flex;
+        margin-bottom: 0.5rem;
+        
+    }
+    div.middle-div .author-right .author-right-card-wrapper .card .card-content{
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+
+    }   
+
+    div.middle-div .author-right .author-right-card-wrapper .card .card-content .author-name{
+        margin-bottom: 0.4rem;
+    }
+
+/*------------------------------ Footer div ---------------------- */
+
+footer{
+    /* position: absolute;
+    bottom: 0rem;
+    display: flex;
+    background: black;
+    color: white;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%; */
+    width: 100vw;
+    height: 3rem;
+    background-color: black;
+    margin-top: auto;
+    
+}
+
+footer p{
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 3rem;
+
+}
+/* ------------------------------------Footer Section End ------------------------------------- */
+
+/* ---------------------------------------Media Query Start -------------------------------------- */
+
+/* @media only screen and (max-width:950px){
+    html{
+        color: blue;
+    }
+
+    .navbar{
+        flex-direction: column;
+    }
+
+    .navbar_elements{
+        flex-direction: column;
+    }
+
+    div.middle-div .author-right .author-right-header{
+        flex-direction: column;
+    }
+
+    div.middle-div .author-right .author-right-header .categories{
+        flex-direction: column;
+    }
+
+    div.middle-div .author-right .author-right-card-wrapper {
+        grid-template-columns: 1fr;
+    }    
+}
+
+
+
+
+
+
+@media only screen (max-width:425px){
+    html{
+       color: red;
+       font-size: 55%;
+       /* width: 100vw; */
+   /* }
+
+    body{
+        width: 100vw;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    div.middle-div .author-right .author-right-card-wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    div.middle-div .author-right .author-right-header .categories {
+        display: none;
+    }
+
+    .div .middle-div .author-left{
+        display: none;
+    }
+} */
+
+@media only screen and (max-width:1035px){
+    body{
+        /* color: blue; */
+        /* height: 208rem; */
+
+    }
+
+    .main-carousel .carousel-cell{
+        width: 50%;
+    }
+
+    .main-carousel .carousel-cell-image img {
+        width: 14rem;
+    }
+
+    div.middle-div .author-left .author-left-week .left-week-heading {
+        padding-left: 2rem;
+    }
+
+    .main-carousel .carousel-cell .carousel-format .carousel-cell-content h1 {
+        font-size: 1.9rem;
+    }
+    
+    div.middle-div .author-right .author-right-card-wrapper .card{
+        flex-direction: column;
+        height: 32rem;
+        width: 25rem;
+        margin:auto;
+    }
+
+    div.middle-div .author-right .author-right-card-wrapper .card .card-image img {
+        margin: 0;
+    }    
+
+    div.middle-div .author-right .author-right-card-wrapper{
+        grid-column-gap: 0;
+        height: 100%;
+    }
+
+    div.middle-div {
+        height: 90%;
+        margin-top: 7rem;
+    }
+
+    div.middle-div .author-left .author-left-book-year {
+        /* height: 20%; */
+        margin-top: 5rem;
+        margin-left: 0;
+        margin-right: 0%;
+    }
+
+    .author-left-book-year .author-left-book {
+        display: flex;
+        justify-content: center;
+    }
+
+    .author-left-book-year .author-left-book #span-year{
+        display: none;
+    }
+
+    div.middle-div .author-right{
+        height: 100%;
+    }
+
+    #book-format .author-book-name h1{
+        font-weight: 500;
+    }
+
+    footer p{
+        line-height: -1px;
+    }
+
+    @media only screen and (max-width:750px){
+        html{
+            font-size: 40%;
+        }
+        
+        body{
+            /* color: red; */
+        }
+
+        .logo{
+            position: absolute;
+            color: white;
+            display: block;
+            left: 1rem;
+            line-height: 6.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .navbar{
+            flex-direction: column;
+            margin-bottom: 0rem;
+            background-color: black;
+            height: 42rem;
+            width: 100%;
+            padding-top: 1rem;
+            padding-left: 0;
+            padding-right: 0;
+            margin-bottom: 0rem;
+        }
+
+
+        .navbar .heading {
+            background-color: black;
+            width: 59%;
+            padding: 1rem 0;
+            text-align: center;
+            width: 100%;
+
+        }
+
+        .navbar .heading h1{
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+
+        .navbar_elements{
+            flex-direction: column;
+            margin-left: 0;
+            background-color:  rgb(61, 61, 61);
+            /* display: none; */
+            width: 100%;
+
+        }
+
+        .navbar_elements_left{
+            flex-direction: column;
+            background-color: black;
+            width: 100%;
+            font-weight: 400;
+            
+        }
+
+        .navbar .navbar_elements .navbar_elements_left .element {
+            margin-right: 0;
+            margin: 0rem 0;
+            border: 1px solid black;
+            width: 100%;
+            background-color: rgb(61, 61, 61);
+            text-align: center;
+            padding: 1.5rem 0;
+            width: 100%;
+            line-height: 3rem;
+        }
+
+        .navbar_elements .element a {
+            font-size: 2rem;
+        }
+
+        .burger{
+            display: block;
+        }
+
+        .navbar_elements button {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            
+        }
+
+        .h-nav-resp{
+            height: 7.2rem;
+        }
+
+        .v-class-resp{
+            opacity: 0;
+        }
+
+        .main-carousel .carousel-cell{
+            width: 50%;
+        }
+
+        div.middle-div{
+            height: 90%;
+        }
+
+        div.middle-div .author-right .author-right-card-wrapper{
+            /* grid-template-columns: 1fr; */
+            height: 100%;
+        }
+
+        div.middle-div .author-right .author-right-card-wrapper .card{
+            height: 25.5rem;
+            
+        }
+
+        div.middle-div .author-right .author-right-card-wrapper .card .card-content{
+            padding: 0rem 1rem;
+        
+        }
+
+        div.middle-div .author-left .author-left-book h1{
+            font-size: 13px;
+        }
+        
+
+        @media only screen and (max-width:430px){
+           html{
+               font-size: 40%;
+           }
+           
+            body{
+                /* color: darkgreen; */
+            
+            }
+
+            section .middle-div{
+                flex-direction: column;
+                /* background-color: grey; */
+                height: 90%;
+            }
+
+            div.middle-div .author-right .author-right-card-wrapper{
+                grid-template-columns: 1fr;
+                height: 100%;
+            }
+
+
+            div.middle-div .author-left .author-left-week .plus-visible{
+                opacity: 1 !important;
+                font-size: 3rem;
+                font-weight: bold;
+                padding: 0;
+                margin: 0;
+                width: 5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            div.middle-div .author-left .author-left-week h1{
+                font-weight: 400;
+                font-size: 2.5rem;
+            }
+ 
+            .author-left-book-year .author-left-book #span-year{
+                 display: block;
+                 font-size: 3rem;
+                 font-weight: bold; 
+                 width: 3rem;
+            } 
+
+
+            div.middle-div .author-left{
+                width: 100%;
+            }
+
+            div.middle-div .author-left .author-left-book{
+                margin-top: 5rem;
+                font-size: 2rem;
+                /* font-weight: bold; */
+                padding: 0 1rem;
+                margin: 5;
+                width: 5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            div.middle-div .author-left .author-left-book h1{
+                font-weight: 400;
+                font-size: 2.5rem;
+            }
+
+            div.middle-div .author-right{
+                width: 100%;
+                margin-top: 8rem;
+                height: 100%;
+            }
+
+            div.middle-div .author-right .author-right-card-wrapper .card{
+                width: 68%;
+                margin: auto;
+                margin-top: 2rem;
+                height: 30rem;
+
+            }
+
+            div.middle-div .author-right .author-right-card-wrapper .card .card-image{
+                height: 21rem;
+            }
+
+            div.middle-div .author-right .author-right-card-wrapper .card .card-image img{
+                width: 14rem;
+            }
+
+            .author-right-card-wrapper .card .card-image img{
+                width: 14rem;
+            }
+
+            div.middle-div .author-right .author-right-card-wrapper .card .card-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                padding: 1.3rem 1rem;
+            }
+
+            div.middle-div .author-right .author-right-card-wrapper{
+                grid-row-gap: 2.5rem;
+                margin-top: 10rem;
+                height: 100%;
+            }
+
+            .main-carousel .carousel-cell{
+                width: 100%;
+            }
+
+            .main-carousel .carousel-cell .carousel-format .carousel-cell-content h1{
+                font-size: 2rem;
+            }
+
+            .main-carousel .carousel-cell-content{
+                /* display: none; */
+            }
+
+            .main-carousel .carousel-cell-image{
+                margin-left: 0;
+            
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            }
+
+            div.middle-div .author-left .resp-h{
+                height: 3rem !important;
+                /* background-color: black; */
+            }
+
+            div.middle-div .author-left .author-left-week .opacity-none{
+                display: none;
+
+            }
+
+            div.middle-div .author-left .resp-h-year{
+                height: 2.5rem;
+            }
+
+            .author-left-book-year .opacity-year{
+                opacity: 0;
+                
+            }
+
+
+
+            div.middle-div .author-left .author-left-week .authors-name{
+                background-color: rgba(199, 192, 192, 0.219);
+                width: 43rem;
+                margin-top: 0.5rem;
+                padding: 1rem 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 5rem;
+                
+            }
+    
+            div.middle-div .author-left .author-left-week{
+                margin-bottom: 0rem;
+                height: 30rem;
+            }
+    
+            .author-left-book-year  .author-book-name{
+                background-color: rgba(199, 192, 192, 0.219);
+                width: 43rem;
+                margin-top: 0.5rem;
+                padding: 0.6rem 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 5rem;
+
+            }
+    
+            div.middle-div .author-left .author-left-week .left-week-heading{
+                box-shadow: 0 0 0.7rem grey;
+                width: 43rem;
+                display: flex;
+                background-color: black;
+                color: white;
+                justify-content: space-around;
+                font-weight: 400;
+                padding: 1.2rem 1rem;
+            }
+            
+           
+    
+            div.middle-div .author-left .author-left-book{
+                box-shadow: 0 0 0.7rem grey;
+                width: 43rem;
+                display: flex;
+                background-color: black;
+                color: white;
+                font-weight: 400;
+                padding: 1.2rem 0;
+                justify-content: space-around;
+            }
+            
+            .navbar h1{
+                display: block;
+            }
+
+            .logo{
+                position: absolute;
+                color: white;
+                display: block;
+                left: 1rem;
+                line-height: 6.5rem;
+                font-size: 1.5rem;
+
+            }
+        }
+
+    }
+} 

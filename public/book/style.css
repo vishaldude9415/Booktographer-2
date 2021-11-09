@@ -1,0 +1,560 @@
+/*------------------------------------ CSS Fonts Imports--------------------------------------------  */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/*------------------------------------ CSS Variables Used--------------------------------------------  */
+
+:root{
+    --Poppins: 'Poppins', sans-serif;
+    --Baloo-Bhai-2: 'Baloo Bhai 2', cursive;
+    --Raleway: 'Raleway', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+    --Ubuntu: 'Ubuntu', sans-serif;
+    --font-family: var(--Ubuntu);
+}
+
+body{
+    background-color: #8059004a;
+    margin: 0;
+}
+
+/* -----------------------------------------NAVBAR------------------------------------------------------ */
+.logo-display{
+    display: none;
+  }
+  
+  .logo{
+    display: none;
+  }
+  
+  .navbar{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0rem ;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+    background-color: black;
+    padding: 1rem;
+    height: 3rem;
+    /* display: none; */
+  }
+  .navbar .heading h1{
+       color: white;
+       font-size: 1.8rem;
+       cursor: pointer;
+       font-family: var(--font-family);
+  }
+  
+  .navbar_elements{
+    display: flex;
+    margin-left: 8rem;
+    width: 59%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-family);
+  }
+  
+  .navbar .navbar_elements .navbar_elements_left{
+    display: flex;
+  }
+  
+  .navbar_elements button{
+    /* padding: 1rem 4.1rem; */
+    /* background-color: ; */
+    background: linear-gradient(to right,rgba(255,0,0,1),rgba(212, 115, 115, 0.986));
+    border: 1px solid red;
+    outline: none;
+    border: 2px solid red;
+    border-radius: 7rem;
+    cursor: pointer;
+    height: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+  }
+  
+  .navbar_elements button:hover{
+    background-color: white;
+  
+  }
+  
+  .navbar_elements button:hover a{
+    color:black;
+  }
+  
+  .navbar_elements button a{
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-family);
+  }
+  
+  .navbar .navbar_elements .navbar_elements_left .element{
+    margin-right: 2rem;
+  }
+  
+  .navbar_elements .element a{
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    font-family: var(--font-family);
+  }
+  
+  
+  
+  .burger{
+    display: none;
+  position: absolute;
+  cursor: pointer;
+  right: 2rem;
+  top: 2rem;
+  }
+  
+  .line{
+    width: 3.3rem;
+    background-color: white;
+    height: 0.4rem;
+    margin: 0.3rem 0.3rem;
+  }
+  
+  /*--------------------------------------- NAVBAR END -----------------------------------*/
+    
+  
+
+.flex-container{
+    
+    display: flex;
+    flex-direction: column;
+    /* width: 55%; */
+}
+#flex-container{
+    display: flex;
+    flex-direction: row;
+    
+}
+#flex-container-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    /* width: 45%; */
+}
+#bookname{
+    margin: 30px 0 0 40px;
+    font-size: 24px;
+    
+}
+#bookname h1{
+    font-family: var(--font-family);
+    
+}
+#aboutbookhead{
+    margin: 1px 0 0 40px;
+    font-family: var(--font-family);
+}
+#img{
+  margin: 40px 25px 0 25px;
+  width: 300px;
+  height: 440px;
+    
+}
+
+#img img{
+   width: 300px;
+   border-radius: 20px;
+   height: 420px;
+}
+
+#aboutbookpara{
+    margin: 0 30px 10px 40px;
+    font-size: 16px;
+    font-family: var(--font-family);
+
+    
+}
+/* #button button{
+ margin: 20px 0 2px 90px;
+    padding-left: 20px;
+    padding-right: 20px;
+   border-radius:14px;
+    height: 25px;
+    width: 90%;
+   background: linear-gradient(to right,ghostwhite,lightcyan);
+} */
+
+#button button{
+    width: 120px;
+    border-radius: 10px;
+    background: linear-gradient(to right,ghostwhite,lightcyan);
+    padding: 2px;
+}
+
+#button button:hover{
+/*   background-color: red; */
+    cursor: pointer;
+   
+}
+
+#quote{
+    
+    font-size: 20px;
+    margin:  1px 13px 1px 300px;
+    color: red;
+    text-align: center;
+    font-family: var(--font-family);
+    vertical-align: middle;
+}
+#quote p{
+    /* width: 530px; */
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17%;
+    height: 216px;
+}
+
+.virtual-stores{
+    margin: 30px auto;
+    text-align: center;
+}
+.virtual-stores img{
+    width: 10%;
+    margin: 0 20px;
+    cursor: pointer;
+    border-radius: 60%;
+}
+#local{
+     margin: 20px auto;
+    text-align: center;
+}
+#local img{
+     width: 10%;
+    margin: 0 12px;
+    cursor: pointer;
+    border-radius: 60%;
+    
+}
+
+.subparas{
+    text-align: left;
+    font-family: var(--font-family);
+    margin: 2px 30px 2px 40px;
+    color: black;
+    margin: 2px 150px;
+}
+.subparas p{
+    font-size: 13px;
+}
+.subheads{
+    text-align: center;
+   text-decoration-style:solid;
+    letter-spacing: 1px;
+    padding: 1px 5px 1px 5px;
+    font-family: var(--font-family);
+    color: black;
+    
+   
+}
+
+/*------------------------------ Footer div ---------------------- */
+
+footer{
+    /* position: absolute;
+    bottom: 0rem;
+    display: flex;
+    background: black;
+    color: white;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%; */
+    /* width: 100vw; */
+    height: 2rem;
+    background-color: black;
+    margin-top: auto;
+    
+}
+
+footer p{
+    font-size: 0.8rem;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 2rem;
+
+}
+/* ------------------------------------Footer Section End ------------------------------------- */
+
+
+
+   /*---------B   R   E   A   K          P  O  I  N  T  S--------*/
+
+   @media only screen and (max-width: 850px){
+       html{
+           /* background-color: red; */
+       }
+
+
+       .logo{
+        position: absolute;
+        color: white;
+        display: block;
+        left: 1rem;
+        line-height: 6.5rem;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        height: 70px ;
+        align-items: center;
+    }
+
+    .line{
+        width: 2.3rem;
+    background-color: white;
+    height: 0.2rem;
+    margin: 0.3rem 0.3rem;
+    }
+
+    .logo h1{
+        margin: 0px;
+        font-size: 25px;
+        height: 90px;
+    }
+    
+    .navbar{
+        flex-direction: column;
+        margin-bottom: 0rem;
+        background-color: black;
+        height: 42rem;
+        width: 100%;
+        padding-top: 1rem;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 0rem;
+    }
+
+
+    .navbar .heading {
+        background-color: black;
+        width: 59%;
+        padding: 1rem 0;
+        text-align: center;
+        width: 100%;
+        padding-bottom: 21px;
+
+    }
+
+    .navbar .heading h1{
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    .navbar_elements{
+        flex-direction: column;
+        margin-left: 0;
+        background-color:  rgb(61, 61, 61);
+        /* display: none; */
+        width: 100%;
+
+    }
+
+    .navbar_elements_left{
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        font-weight: 400;
+        
+    }
+
+    .navbar .navbar_elements .navbar_elements_left .element {
+        margin-right: 0;
+        margin: 0rem 0;
+        border: 1px solid black;
+        width: 100%;
+        background-color: rgb(61, 61, 61);
+        text-align: center;
+        padding: 1.5rem 0;
+        width: 100%;
+        line-height: 3rem;
+    }
+
+    .navbar_elements .element a {
+        font-size: 2rem;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .navbar_elements button {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        
+    }
+
+    .h-nav-resp{
+        height: 2.5rem;
+    }
+
+    .v-class-resp{
+        opacity: 0;
+    }
+    #flex-container{
+    
+        display: flex;
+        flex-direction: column;
+        /* width: 55%; */
+    }
+
+    #flex-container-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        width: 100%;
+        /* width: 45%; */
+    }
+     
+    .subparas{
+        margin: 2px 40px;
+    }
+
+    .center {
+        /* border-radius: 1px; */
+        width: 40%;
+        height: 290px;
+    }
+
+    #img{
+        margin: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+          
+      }
+      
+
+   }
+
+@media only screen and (max-width: 600px){
+    html{
+        /* background-color: blue; */
+    }
+
+    /* .logo{
+        position: absolute;
+        color: white;
+        display: block;
+        left: 1rem;
+        line-height: 6.5rem;
+        font-size: 1.5rem;
+
+    } */
+
+
+    #bookname{
+    margin: 40px 40px 0 10px;
+    font-size: 12px;
+    
+}
+    /* #img{
+  margin: 50px 75px 15px 20px;
+        width: 40%;
+        height: 35%;
+        
+    
+} */
+
+.logo{
+    height: 16px;
+    top:23px;
+}
+    #quote{
+    
+    font-size: 14px;
+    margin:  1px 8px 1px 80px;
+    color: red;
+    text-align: center;
+    font-family: var(--font-family);
+    vertical-align: middle;
+}
+    #aboutbookhead{
+    margin: 1px 5px 0 5px;
+    font-family: var(--font-family);
+        font-size: 13px;
+}
+    #aboutbookpara{
+    margin: 0 10px 10px 10px;
+    font-size: 14px;
+    font-family: var(--font-family);
+          
+}
+    #button button{
+ /* margin: 20px 0 2px 40px; */
+    padding-left: 20px;
+    padding-right: 20px;
+   border-radius:14px;
+    height: 22px;
+    width: 150px;
+/*    background: linear-gradient(to right,#8a2be2,#ff00ff);*/
+/*background: linear-gradient(to right,#ffc0cb,#ff1493);*/
+/*    background: linear-gradient(to right,#ffffe0,lightcyan);*/
+   background: linear-gradient(to right,ghostwhite,lightcyan);
+}
+
+    .subparas{
+    text-align: left;
+    font-family: var(--font-family);
+    margin: 10px 17px;
+    color: black;
+        font-size: 14px;
+}
+    .subheads{
+    text-align: center;
+   text-decoration-style:solid;
+    letter-spacing: 1px;
+    padding: 1px 1px 1px 1px;
+    font-family: var(--font-family);
+    color: black;
+        font-size: 13px;
+    
+   
+}
+    .virtual-stores{
+    margin: 15px auto;
+    text-align: center;
+}
+.virtual-stores img{
+    width: 15%;
+    margin: 0 20px;
+    cursor: pointer;
+    border-radius: 60%;
+}
+#local{
+     margin: 15px auto;
+    text-align: center;
+}
+#local img{
+     width: 15%;
+    margin: 0 12px;
+    cursor: pointer;
+    border-radius: 60%;
+    
+}
+    .center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 178px;
+}
+
+.burger{
+    top:23px ;
+}
+}

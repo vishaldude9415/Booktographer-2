@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/genre/CSS_Genre_Page/genre.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Genre_Page</title>
+
+         <!-- Chatra {literal} -->
+<script>
+    (function(d, w, c) {
+        w.ChatraID = 'y9QkNt6Q2gA';
+        var s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = 'https://call.chatra.io/chatra.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+</script>
+<!-- /Chatra {/literal} -->
+
+</head>
+<body onload="loadingFunction()">
+
+    <div id="loading"></div>
+     <!------------------------------ Navbar Section --------------------------------->
+     <div class="logo " id="logo" ><h1>BOOKTOGRAPHER</h1></div>
+     <div class="navbar h-nav-resp">
+         <!-- <h1>BOOKTOGRAPHER</h1> -->
+        <div class="heading v-class-resp">
+            <a style="text-decoration: none;" href="/"> <h1>BOOKTOGRAPHER</h1></a>
+        </div>
+        <div class="navbar_elements v-class-resp">
+        <div class="navbar_elements_left">
+        <div class="home element">
+            <a href="/">Home</a>
+        </div>
+        <div class="genre element">
+            <a href="/genre">Explore</a>
+        </div>
+        <div class="contact element">
+            <a href="/contact">Contact</a>
+        </div>
+        <div class="about element">
+            <a href="/about">About us</a>
+        </div>
+        </div>
+        <div class="navbar_elements_right">
+            <div class="button">
+                <button><a href="/login">Login</a></button>
+            </div>
+        </div>
+        </div>
+        
+        </div>
+        <div class="burger ">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <!-- NAVBAR SECTION END  -->
+
+    <!--------------------------------------- CAROUSEL ------------------------------>
+
+    <div class="main-carousel " data-flickity='{ "cellAlign": "left", "contain": true, "groupCells": true,"autoPlay": true }'>
+        <%  let count = 1 %>
+        <% allBooks.forEach((book) => { %>
+            <% if(count==7){ %>
+            <% count = 1 }%>
+            
+            <div class="carousel-cell">
+                <div class="carousel-format carousel-<%= count++ %>">
+                    <div class="carousel-cell-image">
+                        <img src="/uploads/<%= book.Book_Image %>" alt="">
+                    </div>
+                    <div class="carousel-cell-content">
+                       <div> 
+                           <h1><%= book.Book_Name %></h1>
+                        <p>by <%= book.Author_Name %></p>
+                       </div>
+                        <p><%= book.Short_Book_Description %></p>
+                       <div id="seeBookBtn"><a href="/genre/book/<%= book.id %>"> <button>See the Book</button></a></div>
+                    </div>
+                </div>
+            </div>
+           <% }) %>
+    </div>    
+
+    <!--------------------------------------------- MIDDLE SECTION -------------------------------------->
+
+    <section>
+        <!-- <div class="responsive-genre">
+            <div class="popular-by-genre">
+                <h1>POPULAR BY GENRE</h1><span id="span-plus" onclick="plus()">+</span>
+            </div>
+        </div> -->
+    <div class="middle-div">
+        <div class="author-left">
+            <div  id="left-week" class="author-left-week resp-h">
+                <div class="left-week-heading"><h1>Popular By Genre </h1><span id="heading-span" class="plus-visible">+</span></div>
+                <div  id="authors" class=" authors resp-category opacity-none">
+                    <div class="authors-name">Business</div>
+                    <div class="authors-name">Science</div>
+                    <div class="authors-name">Fiction</div>
+                    <div class="authors-name">Technology</div>
+                    <div class="authors-name">Philosophy</div>
+                </div>
+            </div>
+            <div  id="book-year" class="author-left-book-year resp-h-year">
+                <div class="author-left-book">
+                    <h1>Book of The Year</h1> <span id="span-year">+</span>
+                </div>
+                <div id="book-format" class="author-book-format opacity-year">    
+                    <% allBooks.slice(-6).reverse().forEach((book) => { %>
+                        <% if(count==7){ %>
+                        <% count = 1 }%>
+                       <a href="/genre/book/<%= book.id %>"> <div class="author-book-name">
+                            <h1><%= book.Book_Name %></h1>
+                            <p>by <%= book.Author_Name %></p>
+                        </div></a>
+                       <% }) %>
+                 </div>   
+
+
+            </div>
+        </div>
+        <div class="author-right">
+            <div class="author-right-header">
+                <div class="heading">Popular By Genre</div>
+                <div class="categories">
+                    <div class="category-name">All Genres</div>
+                    <div class="category-name">Business</div>
+                    <div class="category-name">Science</div>
+                    <div class="category-name">Fiction</div>
+                    <div class="category-name">Technology</div>
+                    <div class="category-name">Philosophy</div>
+                </div>
+            </div>
+            <!-- <hr class="one"> -->
+            <div class="author-right-card-wrapper">
+              <% books.slice().reverse().forEach((book) => { %>
+                <a href="/genre/book/<%= book.id %>">
+                    <div class="card">
+                    <div class="card-image">
+                        <img src="/uploads/<%= book.Book_Image %>" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h1><%= book.Book_Name %></h1>
+                        <p  class="author-name">by <%= book.Author_Name %></p>
+                        <div class="star">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star-half-o"></span>
+                            <span class="fa fa-star-o"></span>
+                        </div>
+                        <p><%= book.Short_Book_Description %></p>
+                    </div>
+                </div>
+               </a>
+               <% }) %>
+            </div>
+            </div>
+            </div>
+        </section>
+
+    <!-------------------------------------- Footer Section  --------------------------->
+    <footer>
+        <p>Copyright &copy 2020 - BOOKTOGRAPHER - All Rights Reserved</p>
+    </footer>
+    <!-- ----------------------------  -----Footer Section End -------------------------->
+    <!-- ------------------------------Script----------------------------------------- -->
+         
+      <script>
+          var preloader = document.getElementById('loading');
+          console.log(preloader);
+ 
+          function loadingFunction(){
+              preloader.style.display = 'none';
+}
+      </script>
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <script src="/genre/js/responsive.js"></script>
+ 
+</body>
+</html>

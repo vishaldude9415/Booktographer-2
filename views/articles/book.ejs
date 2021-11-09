@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">   
+   <title>Book_detail_page</title> 
+    <link rel="stylesheet" type="text/css" href="/book/style.css">
+</head>
+    <body>
+        <!-- --------------------------------NAVBAR START ------------------------------- -->
+  <div class="logo " id="logo" ><h1>BOOKTOGRAPHER</h1></div>
+  <div class="navbar h-nav-resp">
+      <!-- <h1>BOOKTOGRAPHER</h1> -->
+     <div class="heading v-class-resp">
+        <a style="text-decoration: none;" href="/"> <h1>BOOKTOGRAPHER</h1></a>
+     </div>
+     <div class="navbar_elements v-class-resp">
+     <div class="navbar_elements_left">
+     <div class="home element">
+         <a href="/">Home</a>
+     </div>
+     <div class="genre element">
+         <a href="/genre">Explore</a>
+     </div>
+     <div class="contct element">
+         <a href="/contact">Contact</a>
+     </div>
+     <div class="about element">
+        <a href="/about">About us</a>
+    </div>
+     </div>
+     <div class="navbar_elements_right">
+         <div class="button">
+             <button><a href="/login">Login</a></button>
+         </div>
+     </div>
+     </div>
+     
+     </div>
+     <div class="burger ">
+         <div class="line"></div>
+         <div class="line"></div>
+         <div class="line"></div>
+     </div>
+
+     <!-- NAVBAR SECTION END  -->
+
+        
+        
+     <div id="flex-container">
+         <div id="flex-container-2">
+             
+     <div id="img">  
+         <img  src="/uploads/<%= book_detail.Book_Image %>"    >
+     </div>
+           <div id="button"><a href="/uploads/<%= book_detail.Book_pdf %>" target="_blank">
+    <button type="button">Want to read? </button></a>
+       </div>  
+             </div>
+        <div class="flex-container">
+        <div id="bookname"> <h1><%= book_detail.Book_Name %></h1> </div>  
+        <% if(book_detail.Quote){    %>  
+         <div id="quote"><p>“<%= book_detail.Quote %>” ― <%= book_detail.Author_Name %></p></div>
+         <% } %>
+        
+            
+    <div id="aboutbookhead"> <h2>About the Book</h2> </div>
+     <div id="aboutbookpara">
+     <p style="line-height: 25px;" ><%= book_detail.Detail_Book_Description %></p></div>
+        
+        </div> 
+        </div>
+
+
+        
+        
+        <!--            AUTHOR            -->
+        <div class="subheads">
+        <h2><%= book_detail.Author_Name %></h2>
+    </div>
+        <div class="subheads">
+            <h3>(Author of '<%= book_detail.Book_Name %>')</h3>
+        </div>
+        <img id="authorImage" src="/uploads/<%= book_detail.Author_Image %>" alt="Jennifer Niven" class="center" style="border-radius: 5px;" >
+ <div class="subparas">
+ <p style="line-height: 23px;" ><%= book_detail.About_Author %></p>
+            </div>
+        
+<!--                   online order stuff              -->
+        <div class="subheads">
+        <h2> Order this book online </h2> 
+    </div>
+<!--                         add the links              -->
+            
+       <div class="virtual-stores">
+   <a href="<%= book_detail.Flipkart_Link %>" target="_blank"> <img src="/book/images/flipkart1.jfif"></a>
+           
+ <a href="<%= book_detail.Amazon_Link %>" target="_blank" > <img src="/book/images/amazon.jpeg" ></a>
+           
+   
+<a href="<%= book_detail.Snapdeal_Link %>" target="_blank"> <img src="/book/images/snapdeal2.jpg"></a>                  
+</div>
+            
+<!--                     local liberary stuff        -->
+         <div class="subheads">
+        <h2> Read at local liberary </h2>
+    </div>
+<!--                         add the links              -->
+    <div id="local"> <a href="https://www.google.com/maps/search/bookstore" target="_blank"> <img src="/book/images/google_maps_logo3.png"></a> </div>
+        
+ <!-------------------------------------- Footer Section  --------------------------->
+ <footer>
+    <p>Copyright &copy 2020 - BOOKTOGRAPHER - All Rights Reserved</p>
+</footer>
+<!-- ----------------------------  -----Footer Section End -------------------------->
+<script src="/genre/js/responsive.js"></script>
+
+    </body>
+</html>

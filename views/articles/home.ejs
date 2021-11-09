@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <title>Booktographer</title>
+    <link rel="stylesheet" href="/home/css/style.css">
+
+</head>
+<body class="background">
+
+    <!-- Navbar Section  -->
+
+    <div class="navbar">
+        <div class="heading">
+            <a style="text-decoration: none;" href="/"> <h1>BOOKTOGRAPHER</h1></a>
+        </div>
+        <div class="navbar_elements">
+        <div class="navbar_elements_left">
+        <div class="home element">
+            <a href="/">Home</a>
+        </div>
+        <div class="genre element">
+            <a href="/genre">Explore</a>
+        </div>
+        <div class="contact element">
+            <a href="/contact">Contact</a>
+        </div>
+        <div class="about element">
+            <a href="/about">About us</a>
+        </div>
+        </div>
+        <div class="navbar_elements_right">
+            <div class="button">
+                <button><a href="/login">Login</a></button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR Section End  -->
+
+    <!-- Main Body Section  -->
+    
+    <div class="main_body">
+        <div class="main_body_heading">
+            <h1>Get Best Books</h1>
+        </div>
+        <div class="main_body_paragraph">
+            <P> Best place for the books where books are everything</P>
+        </div>
+    </div>
+    <!-- Footer Part Start -->
+    <footer>
+
+        <div class="footer">
+            <form action="/search" method="post">
+                <div class="Book_Name footer_item">
+                    <input id="bookName" name="Book_Name" type="text" placeholder="Enter/Say Search Book">
+                </div>
+                <div class="Author_Name footer_item">
+                    <input id="authorName" name="Author_Name" type="text" placeholder="Enter/Say Search Author">
+                </div>
+                <div class="button footer_item">
+                    <button id="searchButton" type="submit">Search</button>
+                </div>
+                </form>
+        </div>
+    </footer>
+    <div class="alan-btn"></div>
+
+<!----------------------------------------- VOICE ------------------------------------------>
+    <script type="text/javascript"
+ src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+<script>
+  var alanBtnInstance = alanBtn({
+    key: "104a3655316b595c3fde32038a3e2338fdd0dc/stage",
+    onCommand: function (commandData) {
+      if (commandData.command === "go:back") {
+        //call client code that will react on the received command
+      }
+      if (commandData.command === "Search-Book") {
+        console.log(commandData.Book);
+        let BookName = document.getElementById('bookName').value = commandData.Book;
+        let SearchButton = document.getElementById('searchButton').click();
+
+      }
+      if (commandData.command === "Search-Author") {
+        console.log(commandData.Author);
+        let AuthorName = document.getElementById('authorName').value = commandData.Author;
+        let SearchButton = document.getElementById('searchButton').click();
+
+      }
+      if (commandData.command === "go:back") {
+        //call client code that will react on the received command
+      }
+      if (commandData.command === "go:back") {
+        //call client code that will react on the received command
+      }
+    },
+    rootEl: document.getElementById("alan-btn"),
+  });
+</script>
+<!-------------------------------------------VOICE ------------------------------------------>
+</body>
+</html>
